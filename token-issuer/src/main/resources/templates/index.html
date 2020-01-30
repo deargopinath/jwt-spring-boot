@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Token Issuer Service</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css"
+            href="css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JSON Web Token Issuer Service</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid col-md-6 col-md-offset-3">
+            <form id="create-jwt-form" class="form-horizontal">
+                <div class="row">
+                    <label class="control-label col-sm-2">Service Provider URL</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="clientURL" required/>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <label class="control-label col-sm-2">User</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="user" required/>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <label class="control-label col-sm-2">Account</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="account" required/>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="create-jwt-button"
+                                class="btn btn-primary">Get a token
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div class="container-fluid col-md-6 col-md-offset-3" id="login-section">
+            <div class="row">
+              <label class="control-label col-sm-2">Token</label>
+              <div class="col-sm-10">
+                 <textarea id="token" disabled class="form-control rounded-2" rows="3">
+                 </textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="login-button" class="btn btn-success" onclick="login()">
+                        Service Provider Login with Token
+                    </button>
+                </div>  
+            </div>
+        </div>
+        <div class="container-fluid col-md-6 col-md-offset-3" id="error-section">
+        </div>
+        <script type="text/javascript"
+                src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
