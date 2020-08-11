@@ -13,9 +13,6 @@
     <version>1.0.0</version>
     <name>token-issuer</name>
     <description>Service to issue JSON Web Tokens</description>
-    <properties>
-            <java.version>13</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>com.nimbusds</groupId>

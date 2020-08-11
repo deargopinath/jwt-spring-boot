@@ -25,7 +25,7 @@ import java.security.cert.CertificateException;
 import java.security.interfaces.RSAPrivateKey;
 import java.util.Calendar;
 import java.util.Enumeration;
-
+//
 @Service
 public class TokenService {
 
@@ -121,7 +121,7 @@ public class TokenService {
             RSAKey clientPublicKey = getPublicKey(clientCertificate);
 
             jwe.encrypt(new RSAEncrypter(clientPublicKey));
-            
+
             token = jwe.serialize();
             LOG.info("Token = " + token);
             
